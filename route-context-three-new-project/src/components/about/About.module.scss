@@ -1,0 +1,19 @@
+.about-box {
+  height: 100%;
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 3rem;
+  &--token {
+    overflow-wrap: break-word;
+  }
+
+  &--title {
+    font-size: 1.6rem;
+  }
+
+  &--username {
+    font-size: 1.6rem;
+  }
+}

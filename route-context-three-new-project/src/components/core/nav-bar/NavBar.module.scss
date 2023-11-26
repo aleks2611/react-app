@@ -1,0 +1,63 @@
+.nav-bar {
+  height: 70px;
+
+  &-links {
+    transition: all 1s;
+    width: 100vw;
+    background-color: rgb(25, 118, 210);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    button {
+      font-size: 3rem;
+    }
+  }
+
+  &-hamburger {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      .nav-bar-hamburger-menu::before {
+        top: 0;
+        transform: rotate(40deg);
+        transition: all 0.5s;
+      }
+      .nav-bar-hamburger-menu::after {
+        top: 0;
+        transform: rotate(-40deg);
+        transition: all 0.5s;
+      }
+      .nav-bar-hamburger-menu {
+        border-bottom: 0;
+      }
+    }
+
+    &-menu {
+      width: 3rem;
+      border-bottom: white solid 3px;
+      position: absolute;
+      top: 1.5rem;
+
+      &::before {
+        position: absolute;
+        content: "";
+        border-bottom: white solid 3px;
+        top: -1rem;
+        width: 3rem;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        border-bottom: white solid 3px;
+        top: 1rem;
+        width: 3rem;
+      }
+    }
+  }
+}
