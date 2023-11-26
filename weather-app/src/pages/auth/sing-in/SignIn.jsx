@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { Button, Stack, TextField } from "@mui/material";
+import classes from "./SignIn.module.scss";
 import useAuth from "../../../hooks/UseAuth";
 
 const formValues = {
@@ -78,8 +79,8 @@ function SignIn() {
           {...register("password", {
             required: "Password  is required",
             minLength: {
-              value: 4,
-              message: "Password must be at least 4 characters long",
+              value: 6,
+              message: "Password must be at least 6 characters long",
             },
             maxLength: {
               value: 12,

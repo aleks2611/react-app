@@ -3,9 +3,7 @@ import {
   Toolbar,
   Typography,
   Button,
-  Stack,
-  Switch,
-  IconButton,
+  Stack
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Hidden from "@mui/material/Hidden";
@@ -16,7 +14,6 @@ import useAuth from "../../../hooks/UseAuth";
 function NavBar({ children }) {
   const [showHamburgerMenu, setShowHamburgerMany] = useState(false);
   const { logout, isLogin } = useAuth();
-  const label = { inputProps: { "aria-label": "Switch demo" } };
 
   const navigate = useNavigate();
 
@@ -24,8 +21,6 @@ function NavBar({ children }) {
     navigate(url);
     handleHamburgerClick();
   }
-
-  function handleChangeMod() {}
 
   function handleHamburgerClick() {
     setShowHamburgerMany((data) => !data);

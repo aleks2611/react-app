@@ -6,21 +6,20 @@ import {
   IconButton,
   ThemeProvider,
 } from "@mui/material";
-import crateContext, { ACTION_SET_LOADER } from "./context/Provider";
-import NavBar from "./components/core/nav-bar/NavBar";
-import Footer from "./components/core/footer/Footer";
+import crateContext from "./context/Provider";
+import NavBar from "./pages/core/nav-bar/NavBar";
+import Footer from "./pages/core/footer/Footer";
 import ProtectedRoute from "./hooks/UseProtectedRoute";
 import classes from "./App.module.scss";
 import useAuth from "./hooks/UseAuth";
 import { darkTheme, lightTheme } from "./context/ThemeProvider";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import NotFound from "./components/not-found/NotFound";
+import NotFound from "./pages/not-found/NotFound";
 
-const Login = lazy(() => import("./components/auth/Auth"));
-const Home = lazy(() => import("./components/home/Home"));
-const SignIn = lazy(() => import("./components/auth/sing-in/SignIn"));
-const About = lazy(() => import("./components/about/About"));
+const Login = lazy(() => import("./pages/auth/Auth"));
+const Home = lazy(() => import("./pages/home/Home"));
+const SignIn = lazy(() => import("./pages/auth/sing-in/SignIn"));
+const About = lazy(() => import("./pages/about/About"));
 
 function App() {
   const { state } = useContext(crateContext);
