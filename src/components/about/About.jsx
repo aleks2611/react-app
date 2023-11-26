@@ -9,7 +9,7 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import EditIcon from "@mui/icons-material/Edit";
 import classes from "./About.module.scss";
-import EditUser from "./edit-user/editUser";
+import EditUser from "./edit-user/EditUser";
 import crateContext, { ACTION_SET_USER } from "../../context/Provider";
 
 function About() {
