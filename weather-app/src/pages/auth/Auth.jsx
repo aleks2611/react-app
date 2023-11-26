@@ -14,7 +14,6 @@ import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
-import SwipeableViews from "react-swipeable-views";
 
 import { useState } from "react";
 import useAuth from "../../hooks/UseAuth";
